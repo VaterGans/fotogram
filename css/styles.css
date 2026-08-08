@@ -115,7 +115,7 @@ dialog.opened::backdrop {
     align-items: space-between;
     gap: 16px;
     row-gap: 32px;
-    margin-bottom: 32px;
+    margin: 0 16px 32px;
 }
 
 .thumbnail {
@@ -135,7 +135,7 @@ dialog.opened::backdrop {
     object-fit: cover;
 }
 
-.thumbnail img:hover{
+.thumbnail img:hover {
     width: 160px;
     height: 160px;
     transition: all 0.25s ease-in-out;
@@ -265,8 +265,8 @@ footer {
 }
 
 footer img {
-    width: 75px;git 
-    height: auto;
+    width: 75px;
+    git height: auto;
 }
 
 .semicircle {
@@ -357,5 +357,39 @@ footer img {
 
     #arrow-line {
         gap: 32px;
+    }
+}
+
+@media (max-width: 385px) {
+    #crazy-animals {
+        width: 280px;
+        height: 424px;
+    }
+
+    #crazy-animals img {
+        width: 240px;
+        height: 175px;
+        object-fit: cover;
+    }
+
+    #canvas {
+        margin: 0 0 32px;
+    }
+
+    .thumbnail {
+        width: 130px;
+        height: 130px;
+    }
+
+    .thumbnail img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .thumbnail img:hover {
+        width: 160px;
+        height: 160px;
+        transition: all 0.25s ease-in-out;
     }
 }
