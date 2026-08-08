@@ -115,6 +115,7 @@ dialog.opened::backdrop {
     align-items: space-between;
     gap: 16px;
     row-gap: 32px;
+    margin-bottom: 32px;
 }
 
 .thumbnail {
