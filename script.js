@@ -2,23 +2,6 @@ const dialogRef = document.getElementById('crazy-animals');
 let currentIndex = 0;
 const body = document.getElementsByTagName("body");
 
-function openDialog(id, event) {
-    currentIndex = parseInt(id);
-    updateDialog();
-    event.stopPropagation();
-    dialogRef.showModal();
-    dialogRef.classList.add("opened");
-}
-
-function closeDialog() {
-    dialogRef.close();
-    dialogRef.classList.remove("opened");
-}
-
-function stayOpen(event) {
-    event.stopPropagation();
-}
-
 const pictures = [
     "crazyAnimal01.png",
     "crazyAnimal02.png",
@@ -64,10 +47,27 @@ const title = [
     "Affofant"
 ];
 
+function openDialog(id, event) {
+    currentIndex = parseInt(id);
+    updateDialog();
+    event.stopPropagation();
+    dialogRef.showModal();
+    dialogRef.classList.add("opened");
+}
+
+function closeDialog() {
+    dialogRef.close();
+    dialogRef.classList.remove("opened");
+}
+
+function stayOpen(event) {
+    event.stopPropagation();
+}
+
 function init() {
     const pic = document.getElementById("canvas");
     for (let i = 0; i < pictures.length; i++) {
-        pic.innerHTML += `<li id='${i}' class='thumbnail' tabindex='0' onclick='openDialog(this.id, event)' aria-haspopup='dialog' aria-controls='crazy-animals'><img src='img/${pictures[i]}' alt='${alt[i]}'></li>`;
+        pic.innerHTML += `<li><button id='${i}' class='thumbnail' tabindex='0' onclick='openDialog(this.id, event)' aria-haspopup='dialog' aria-controls='crazy-animals'><img src='img/${pictures[i]}' alt='${alt[i]}'></button></li>`;
     }
 }
 

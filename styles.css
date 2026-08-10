@@ -118,6 +118,10 @@ h1 {
     padding: 0 16px;
 }
 
+#canvas li {
+    list-style-type: none;
+}
+
 .thumbnail {
     display: flex;
     justify-content: center;
@@ -127,6 +131,7 @@ h1 {
     border-radius: 16px;
     border: 2px solid var(--blue-85);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .thumbnail img {
@@ -203,10 +208,13 @@ h1 {
     border: none;
     padding: 0;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
 }
 
-#closing:hover,
+#closing:hover {
+    background-image: url(img/closing-hover.svg);
+}
+
 #closing:focus {
     background-image: url(img/closing-hover.svg);
 }
