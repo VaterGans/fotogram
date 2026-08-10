@@ -11,7 +11,10 @@
     --grey-40: #99acb3;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap');
+@font-face {
+    font-family: 'Figtree';
+    src: url('fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
 
 * {
     margin: 0;
