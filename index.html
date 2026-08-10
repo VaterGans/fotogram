@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram - Die Seite mit den schrägen Vögeln</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon-spica.svg">
 </head>
 
 <body onload="init()" onclick="closeDialog(event)">
@@ -15,43 +16,36 @@
         </div>
     </header>
     <main>
-        <dialog id="crazy-animals" aria-labelledby="foto-title" aria-details="Diese Dialogbox ermöglicht es, die verhältnismäßig klein dargetsellten Bilder größer anzuzeigen. Es gibt zusätzlich den Fototitel, einen Button, um die Box zu schlie0ßen, sowie Pfeile, um durch die Galerie zu klicken, ohne jedesmal die Dialoigbox zu schließen. Außerdem wird das aktuelle Bil die die maximale Zahl an Fotos angezigt.">
-            <div class="frame" onclick="stayOpen(event)">
-                <div class="content">
-                    <header id="foto-header">
-                        <h2 id="foto-title"></h2>
-                        <button id="closing" onclick="closeDialog()" tabindex="0" aria-label="Dialogbox schließen"></button>
-                    </header>
-                    <img id="foto" src="" alt="">
-                    <div id="arrow-line">
-                        <button id="left-arrow" onclick="showPreviousFoto()" aria-label="Vorheriges Foto anzeigen">&#8592;</button>
-                        <div id="counter">
-                            <span id="current" aria-label="aktuelle Fotonummer der Galerie"></span>
-                            <span>/</span>
-                            <span id="total" aria-label="Gesamtzahl der Fotos in der Galerie"></span>
-                        </div>
-                        <button id="right-arrow" onclick="showNextFoto()" aria-label="Nächstes Foto anzeigen">&#8594;</button>
+        <dialog id="crazy-animals" aria-labelledby="foto-title"
+            aria-details="Diese Dialogbox ermöglicht es, die verhältnismäßig klein dargetsellten Bilder größer anzuzeigen. Es gibt zusätzlich den Fototitel, einen Button, um die Box zu schlie0ßen, sowie Pfeile, um durch die Galerie zu klicken, ohne jedesmal die Dialoigbox zu schließen. Außerdem wird das aktuelle Bil die die maximale Zahl an Fotos angezigt.">
+            <section class="frame" onclick="stayOpen(event)">
+                <header id="foto-header">
+                    <h2 id="foto-title"></h2>
+                    <button id="closing" onclick="closeDialog()" tabindex="0" aria-label="Dialogbox schließen"></button>
+                </header>
+                <img id="foto" src="" alt="">
+                <div id="arrow-line">
+                    <button id="left-arrow" onclick="showPreviousFoto()"
+                        aria-label="Vorheriges Foto anzeigen">&#8592;</button>
+                    <div id="counter">
+                        <span id="current" aria-label="aktuelle Fotonummer der Galerie"></span>
+                        <span>/</span>
+                        <span id="total" aria-label="Gesamtzahl der Fotos in der Galerie"></span>
                     </div>
+                    <button id="right-arrow" onclick="showNextFoto()" aria-label="Nächstes Foto anzeigen">&#8594;</button>
                 </div>
-            </div>
+            </section>
         </dialog>
-        <div class="main-content">
-            <div class="album">
-                <div class="album-title">
-                    <h1>Crazy Zoo</h1>
-                </div>
-                <div id="canvas"></div>
-            </div>
-        </div>
+        <section class="album">
+            <h1>Crazy Zoo</h1>
+            <ul id="canvas"></ul>
+        </section>
     </main>
     <footer>
         <div class="semicircle"></div>
         <div class="footer-bg"><img src="img/Spica-Logo.png" alt="Icon der Fotogram-Seite"></div>
     </footer>
-    <script>
-        init();
-    </script>
 </body>
 
 </html>
-<script src="./js/script.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>

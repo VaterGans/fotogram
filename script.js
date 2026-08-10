@@ -4,7 +4,6 @@ const body = document.getElementsByTagName("body");
 
 function openDialog(id, event) {
     currentIndex = parseInt(id);
-    console.log(currentIndex);
     updateDialog();
     event.stopPropagation();
     dialogRef.showModal();
@@ -68,7 +67,7 @@ const title = [
 function init() {
     const pic = document.getElementById("canvas");
     for (let i = 0; i < pictures.length; i++) {
-        pic.innerHTML += `<div id='${i}' class='thumbnail' tabindex='0' onclick='openDialog(this.id, event)' aria-haspopup='dialog' aria-controls='crazy-animals'><img src='img/${pictures[i]}' alt='${alt[i]}'></div>`;
+        pic.innerHTML += `<li id='${i}' class='thumbnail' tabindex='0' onclick='openDialog(this.id, event)' aria-haspopup='dialog' aria-controls='crazy-animals'><img src='img/${pictures[i]}' alt='${alt[i]}'></li>`;
     }
 }
 
@@ -79,7 +78,6 @@ function showTitle() {
 
 function showCurrentPicture() {
     const currentPicture = document.getElementById("foto");
-    console.log(currentIndex);
     currentPicture.src = `img/${pictures[currentIndex]}`;
     currentPicture.alt = `${alt[currentIndex]};
     event.stopPropagation();`
@@ -120,45 +118,3 @@ function updateDialog() {
     currentPicNumber();
     maxPicNumber();
 }
-
-
-
-
-
-/*  onkeydown='if(event.key === "Enter" && document.activeElement === this) openDialog(this.id, event)' */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Lösung:
-    const currentFoto = document.getElementById("foto");
-    const currentTitle = document.getElementById("foto-title");
-    const currentIndex = parseInt(document.getElementById("current").textContent);
-    const totalFotos = parseInt(document.getElementById("total").textContent); 
-    (this.id)*/

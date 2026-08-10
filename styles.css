@@ -62,14 +62,6 @@ main {
     width: 100%;
 }
 
-.main-content {
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    overflow: hidden;
-}
-
 dialog {
     width: 516px;
     height: 505px;
@@ -96,12 +88,16 @@ dialog.opened::backdrop {
 }
 
 .album {
+    max-width: 1440px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 80px;
+    padding: 80px 0; 
 }
 
-.album-title h1 {
+h1 {
     font-family: "Figtree", sans-serif;
     font-weight: bold;
     font-size: 56px;
@@ -115,7 +111,8 @@ dialog.opened::backdrop {
     align-items: space-between;
     gap: 16px;
     row-gap: 32px;
-    margin: 0 16px 32px;
+    margin: 0;
+    padding: 0 16px;
 }
 
 .thumbnail {
@@ -159,14 +156,11 @@ dialog.opened::backdrop {
 }
 
 .frame {
-    margin: 0;
-    padding: 56px 64px;
-}
-
-.content {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin: 0;
+    padding: 56px 64px;
 }
 
 #crazy-animals img {
@@ -199,7 +193,7 @@ dialog.opened::backdrop {
 #closing {
     width: 32px;
     height: 32px;
-    background-image: url(../img/closing.svg);
+    background-image: url(img/closing.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -211,17 +205,17 @@ dialog.opened::backdrop {
 
 #closing:hover,
 #closing:focus {
-    background-image: url(../img/closing-hover.svg);
+    background-image: url(img/closing-hover.svg);
 }
 
 #closing:active {
-    background-image: url(../img/closing-active.svg);
+    background-image: url(img/closing-active.svg);
 }
 
 #left-arrow {
     width: 60px;
     height: 60px;
-    background-image: url(../img/arrow.svg);
+    background-image: url(img/arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -234,13 +228,13 @@ dialog.opened::backdrop {
 
 #left-arrow:hover,
 #left-arrow:focus {
-    background-image: url(../img/arrow-hover.svg);
+    background-image: url(img/arrow-hover.svg);
 }
 
 #right-arrow {
     width: 60px;
     height: 60px;
-    background-image: url(../img/arrow.svg);
+    background-image: url(img/arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -252,7 +246,7 @@ dialog.opened::backdrop {
 
 #right-arrow:hover,
 #right-arrow:focus {
-    background-image: url(../img/arrow-hover.svg);
+    background-image: url(img/arrow-hover.svg);
 }
 
 footer {
@@ -266,7 +260,7 @@ footer {
 
 footer img {
     width: 75px;
-    git height: auto;
+    height: auto;
 }
 
 .semicircle {
@@ -318,7 +312,7 @@ footer img {
 
 @media (max-width: 576px) {
 
-    .album-title h1 {
+    h1 {
         font-size: 48px;
     }
 
@@ -373,7 +367,7 @@ footer img {
     }
 
     #canvas {
-        margin: 0 0 32px;
+        padding: 0;
     }
 
     .thumbnail {
